@@ -1,4 +1,4 @@
-#linked list
+#ADT linked list
 
 #requires node object
 from node import Node
@@ -22,7 +22,7 @@ class UnorderedList:
                 current = current.get_next()
                 
         return found
-    
+#add node at beginning of list 
     def add(self, item):
         temp = Node(item)
         temp.set_next(self.head)
@@ -68,7 +68,8 @@ class UnorderedList:
             count += 1
         
         return count
-    
+
+#remove and return node at end of linked list
     def pop(self):
         current = self.head
         previous = None
@@ -78,7 +79,8 @@ class UnorderedList:
         
         previous.set_next(None)
         return current
-    
+
+#add item at end of list
     def append(self, item):
         current = self.head
         while current != None:
