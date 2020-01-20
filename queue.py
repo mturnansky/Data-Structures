@@ -4,7 +4,7 @@ Created on Wed Dec 18 11:00:40 2019
 
 @author: Mat
 """
-#ADT Queue
+#ADT Queue where front is back
 class Queue:
     def __init__(self):
         self.items = []
