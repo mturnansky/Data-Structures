@@ -4,8 +4,9 @@ Created on Mon Dec 30 09:24:14 2019
 
 @author: Mat
 """
-from node import Node
+#ADT ordered list (increasing order)
 
+from node import Node
 
 class OrderedList:
     def __init__(self):
@@ -23,7 +24,8 @@ class OrderedList:
             count += 1
         
         return count
-    
+
+#find item via a linked list structure
     def search(self, item):
         current = self.head
         found = False
@@ -38,7 +40,8 @@ class OrderedList:
                 else:
                     current = current.get_next()
         return found
-    
+
+#add item to list while maintaining order 
     def add(self, item):
         current = self.head
         previous = None
@@ -58,7 +61,7 @@ class OrderedList:
             temp.set_next(current)
             previous.set_next(temp)
             
-    #return the index of the item
+#return the index of the item
     def index(self,item):
         current = self.head
         count = 0
@@ -71,7 +74,7 @@ class OrderedList:
             count += 1
         
         return count
-    
+#remove and return element at position args
     def pop(self, *args):
         if args != None:
             pos = self.size()
