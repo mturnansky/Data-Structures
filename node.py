@@ -4,6 +4,8 @@ Created on Sun Dec 29 16:40:26 2019
 
 @author: Mat
 """
+#ADT of node class
+
 class Node:
     def __init__(self, init_data):
         self.data = init_data
