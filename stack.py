@@ -4,7 +4,7 @@ Created on Wed Dec 18 10:03:20 2019
 
 @author: Mat
 """
-
+#ADT Stack implenetation
 class Stack:
     def __init__(self):
         self.items = []
@@ -19,6 +19,7 @@ class Stack:
     def size(self):
         return len(self.items)
 
+#reverse string given input
 def rev_string(string):
     m = Stack()
     n = Stack()
@@ -26,12 +27,4 @@ def rev_string(string):
         m.push(element)
     while not m.is_empty():
         n.push(m.pop())
-    return n
-
-string = "cat"
-
-rev = rev_string(string)
-rev.pop()
-
-print(rev.pop())
-    
+    return n    
